@@ -12,7 +12,7 @@ vector<pair<ll,ll>> dire = {{0,1},{1,0},{-1,0},{0,-1}};
 
 void  bfs(ll x,ll y,ll maxstep,vector<pair<ll,ll>> &que){
 	ll head =0,i,j;
-	for (i=max(x-maxstep,(ll)0);i<=min(y+maxstep,m-1);i++) {
+	for (i=max(x-maxstep,(ll)0);i<=min(x+maxstep,m-1);i++) {
 	    for (j=max(y-maxstep,(ll)0);j<=min(y+maxstep,n-1);j++) {
 	        dis[i][j] = (mat[i][j]==-1)? 0: -1;
 	    }
