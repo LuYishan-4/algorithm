@@ -12,7 +12,7 @@ struct Egde{
 		return dist>o.dist;
 	}
 };
-ll bfs(ll n,ll s,ll t,ll k,const vector<vector<point>> &adj){
+ll pq(ll n,ll s,ll t,ll k,const vector<vector<point>> &adj){
 	priority_queue<Egde,vector<Egde>,greater<Egde>> pq;
 	vector<ll> counter(n+1,0);
 	pq.push({0,s});
@@ -40,7 +40,7 @@ int main(){
 			cin>>u>>v>>w;
 			adj[u].push_back({v,w});
 		}
-		cout<<bfs(n,s,t,k,adj)<<"\n"; 
+		cout<<pq(n,s,t,k,adj)<<"\n"; 
     }
 	return 0;
 }
